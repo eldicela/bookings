@@ -19,7 +19,7 @@ var session *scs.SessionManager
 
 func main() {
 
-	//Chane this to true in production
+	//Change this to true in production
 	app.InProduction = false
 
 	session = scs.New()
@@ -56,5 +56,7 @@ func main() {
 	}
 
 	err = srv.ListenAndServe()
-	log.Fatal(err)
+	if err != nil {
+		log.Fatal(err)
+	}
 }

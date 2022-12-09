@@ -51,12 +51,12 @@ func RenderTemplate(w http.ResponseWriter, tmpl string, td *models.TemplateData)
 		fmt.Println("Error writing template to browser", err)
 	}
 
-	parsedTemplate, _ := template.ParseFiles("./templates/" + tmpl)
-	err = parsedTemplate.Execute(w, nil)
-	if err != nil {
-		fmt.Println("error parsing template: (line 54...) ", err)
-		return
-	}
+	// parsedTemplate, _ := template.ParseFiles("./templates/" + tmpl)
+	// err = parsedTemplate.Execute(w, nil)
+	// if err != nil {
+	// 	fmt.Println("error parsing template: (line 57 @ render.go...) ", err)
+	// 	return
+	// }
 }
 
 // creates a template cache as a map
