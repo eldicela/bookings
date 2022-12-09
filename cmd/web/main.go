@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/alexedwards/scs/v2"
-	"github.com/eldicela/bookings/pkg/config"
-	"github.com/eldicela/bookings/pkg/handlers"
-	"github.com/eldicela/bookings/pkg/render"
+	"github.com/eldicela/bookings/internal/config"
+	"github.com/eldicela/bookings/internal/handlers"
+	"github.com/eldicela/bookings/internal/render"
 )
 
 const portNumber = ":8080"
