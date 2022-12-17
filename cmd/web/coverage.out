@@ -1,0 +1,11 @@
+mode: set
+github.com/eldicela/bookings/cmd/web/main.go:22.13,25.16 2 0
+github.com/eldicela/bookings/cmd/web/main.go:32.2,42.16 4 0
+github.com/eldicela/bookings/cmd/web/main.go:25.16,27.3 1 0
+github.com/eldicela/bookings/cmd/web/main.go:42.16,44.3 1 0
+github.com/eldicela/bookings/cmd/web/main.go:47.18,65.16 10 1
+github.com/eldicela/bookings/cmd/web/main.go:70.2,78.12 6 1
+github.com/eldicela/bookings/cmd/web/main.go:65.16,68.3 2 0
+github.com/eldicela/bookings/cmd/web/middleware.go:10.45,20.2 3 1
+github.com/eldicela/bookings/cmd/web/middleware.go:23.50,25.2 1 1
+github.com/eldicela/bookings/cmd/web/routes.go:12.49,36.2 18 1

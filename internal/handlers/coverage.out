@@ -1,0 +1,22 @@
+mode: set
+github.com/eldicela/bookings/internal/handlers/handlers.go:24.47,28.2 1 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:31.33,33.2 1 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:36.67,41.2 3 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:44.68,56.2 5 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:59.74,68.2 4 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:71.78,73.16 2 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:78.2,91.19 6 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:102.2,103.66 2 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:73.16,76.3 2 0
+github.com/eldicela/bookings/internal/handlers/handlers.go:91.19,100.3 4 0
+github.com/eldicela/bookings/internal/handlers/handlers.go:107.71,109.2 1 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:112.69,114.2 1 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:117.75,119.2 1 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:122.79,127.2 3 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:135.79,142.16 3 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:146.2,147.14 2 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:142.16,144.3 1 0
+github.com/eldicela/bookings/internal/handlers/handlers.go:151.70,153.2 1 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:155.81,157.9 2 1
+github.com/eldicela/bookings/internal/handlers/handlers.go:164.2,171.4 4 0
+github.com/eldicela/bookings/internal/handlers/handlers.go:157.9,162.3 4 1
