@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"path/filepath"
 	"text/template"
+	"time"
 
 	"github.com/eldicela/bookings/internal/config"
 	"github.com/eldicela/bookings/internal/models"
@@ -14,13 +15,43 @@ import (
 	// "github.com/eldicela/mygoprogram/pkg/handlers"
 )
 
-var functions = template.FuncMap{}
+var functions = template.FuncMap{
+	"humanDate":  HumanDate,
+	"formatDate": FormatDate,
+	"iterate":    Iterate,
+	"add":        Add,
+}
 var app *config.AppConfig
 var pathToTemplates = "./templates"
 
-// NewTemplate sets the config for the template package
-func NewTemplate(a *config.AppConfig) {
+func Add(a, b int) int {
+	return a + b
+}
+
+// Iterate returns a slice of ints, starting a 1, going to count
+func Iterate(count int) []int {
+	var i int
+	var items []int
+
+	for i = 0; i < count; i++ {
+		items = append(items, i)
+
+	}
+	return items
+}
+
+// NewRenderer sets the config for the template package
+func NewRenderer(a *config.AppConfig) {
 	app = a
+}
+
+// HumanDate returns time in YYYY-MM-DD
+func HumanDate(t time.Time) string {
+	return t.Format("2006-01-02")
+}
+
+func FormatDate(t time.Time, f string) string {
+	return t.Format(f)
 }
 
 // AddDefaultData adds data for all templates
@@ -29,12 +60,16 @@ func AddDefaultData(td *models.TemplateData, r *http.Request) *models.TemplateDa
 	td.Error = app.Session.PopString(r.Context(), "error")
 	td.Warning = app.Session.PopString(r.Context(), "warning")
 
+	if app.Session.Exists(r.Context(), "user_id") {
+		td.IsAuthenticated = 1
+	}
+
 	td.CSRFToken = nosurf.Token(r)
 	return td
 }
 
 // renders html templates
-func RenderTemplate(w http.ResponseWriter, r *http.Request, tmpl string, td *models.TemplateData) error {
+func Template(w http.ResponseWriter, r *http.Request, tmpl string, td *models.TemplateData) error {
 	var tc map[string]*template.Template
 
 	if app.UseCache {
